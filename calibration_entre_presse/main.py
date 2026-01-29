@@ -7,7 +7,7 @@ import numpy as np
 import glob
 
 import mil as MIL
-import torch
+#import torch
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -98,13 +98,13 @@ def keep_first_in_radius(points, r):
 # IMG_FOLDER = "calibration_images/presse/calibration_2025-11-18/*.bmp"
 # out_calib_name = "presse_calibration"
 
-ROW, COL = 18, 26 # 15, 20 # 16, 23
+ROW, COL = 16, 23
 pattern_size = (COL, ROW)   # checkerboard corners
-square_size = 13.3     # mm
+square_size = 35     # mm
 scale_factor = 1.0
 sym_grid = True
-IMG_FOLDER = "C:\\Users\\alexis.desgagne\\Desktop\\botteuse\\static\\calibration_target\\temp\\*.jpg" #"calibration_images/botteuse/*.jpg"
-out_calib_name = "botteuse_calibration"
+IMG_FOLDER = "C:\\Users\\alexis.desgagne\\PycharmProjects\\Script_Ascenta\\calibration_entre_presse\\images\\*.bmp" #"calibration_images/botteuse/*.jpg"
+out_calib_name = "calibration_"
 
 if __name__ == "__main__":
     date_str = datetime.now().strftime("%Y_%m_%d")
@@ -262,6 +262,3 @@ if __name__ == "__main__":
     MIL.MdispFree(display)
     MIL.MsysFree(sys)
     MIL.MappFree(app)
-
-if __name__ == "__main__":
-    parser
