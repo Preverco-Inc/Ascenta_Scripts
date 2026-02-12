@@ -18,8 +18,6 @@ git clone https://github.com/Preverco-Inc/Ascenta_Scripts
 ```
 4. Navigate to this folder (...\Ascenta_Script\Script_Ascenta) in cmd or powershell to create and activate the conda environment.
 
-### MIL API NOT WORKING Waiting for return from Zebra support
-
 ```bash
 conda env update --prefix ./.condaenv --file environment.yml
 conda activate ./.condaenv
@@ -30,4 +28,10 @@ pip install mil --no-index --find-links="%MIL_PATH%\..\scripting\pythonwrapper\d
 
 ```bash
 python main.py --input_folder "path\to\calib\target\image\folder" --output_calib_folder "path\to\output\calib\folder"
+```
+
+You can use this cmd to see all the options available for the script:
+
+```bash
+python main.py --help
 ```
