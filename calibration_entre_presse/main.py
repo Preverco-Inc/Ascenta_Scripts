@@ -228,7 +228,7 @@ def main(args):
     world_error = MIL.McalInquire(cal_ctx, MIL.M_AVERAGE_WORLD_ERROR + MIL.M_TYPE_MIL_FLOAT)
     print(f"MIL - Pixel error : {pix_error:.4f} - World error : {world_error:.4f}")
 
-    fp_mil_mca_calib = out_folder / f"{args.calib_prefix}_{date_str}.pkl"
+    fp_mil_mca_calib = out_folder / f"{args.calib_prefix}_{date_str}.mca"
     MIL.McalSave(str(fp_mil_mca_calib.resolve()), cal_ctx, MIL.M_DEFAULT)
     dst_img = MIL.MbufAlloc2d(sys, w, h, 8, MIL.M_IMAGE + MIL.M_PROC + MIL.M_DISP)
     dst_img_np = np.zeros((h, w), dtype=np.uint8)
