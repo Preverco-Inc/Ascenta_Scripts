@@ -2,10 +2,9 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.11.9
   - pip
   - pip:
-      - mil --no-index --find-links=%MIL_PATH%\..\scripting\pythonwrapper\dist
       - matplotlib
       - numpy
       - opencv-python-headless

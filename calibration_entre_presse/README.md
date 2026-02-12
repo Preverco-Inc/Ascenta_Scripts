@@ -23,6 +23,7 @@ git clone https://github.com/Preverco-Inc/Ascenta_Scripts
 ```bash
 conda env update --prefix ./.condaenv --file environment.yml
 conda activate ./.condaenv
+pip install mil --no-index --find-links="%MIL_PATH%\..\scripting\pythonwrapper\dist"
 ```
 5. Copy your calibration target images into a folder on your computer. 
 6. Launch the script with the following command:
